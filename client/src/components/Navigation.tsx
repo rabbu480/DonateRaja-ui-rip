@@ -27,16 +27,16 @@ export default function Navigation() {
 
   if (isLoading) {
     return (
-      <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+      <nav className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50 border-b border-red-100 dark:border-red-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg">
                 <HandHeart className="text-white" size={20} />
               </div>
-              <span className="text-xl font-bold text-neutral-900">DonateRaja</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">ShareHeart</span>
             </div>
-            <div className="animate-pulse h-8 w-24 bg-gray-200 rounded"></div>
+            <div className="animate-pulse h-8 w-24 bg-red-100 dark:bg-red-900 rounded-lg"></div>
           </div>
         </div>
       </nav>
@@ -57,16 +57,16 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+      <nav className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50 border-b border-red-100 dark:border-red-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href={isAuthenticated ? "/home" : "/"}>
-              <div className="flex items-center space-x-3 cursor-pointer">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <div className="flex items-center space-x-3 cursor-pointer hover:scale-105 transition-transform">
+                <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg">
                   <HandHeart className="text-white" size={20} />
                 </div>
-                <span className="text-xl font-bold text-neutral-900">DonateRaja</span>
+                <span className="text-xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">ShareHeart</span>
               </div>
             </Link>
 
@@ -75,8 +75,8 @@ export default function Navigation() {
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <span
-                    className={`text-gray-700 hover:text-primary transition-colors cursor-pointer ${
-                      location === link.href ? "text-primary font-medium" : ""
+                    className={`text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors cursor-pointer font-medium ${
+                      location === link.href ? "text-red-600 dark:text-red-400 font-semibold" : ""
                     }`}
                   >
                     {link.label}
@@ -90,14 +90,14 @@ export default function Navigation() {
               {isAuthenticated ? (
                 <>
                   {/* Points Badge */}
-                  <Badge variant="secondary" className="hidden sm:flex">
-                    {user?.points || 0} points
+                  <Badge variant="secondary" className="hidden sm:flex bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300">
+                    {(user as any)?.points || 0} points
                   </Badge>
 
                   {/* Notifications */}
-                  <Button variant="ghost" size="sm" className="relative">
+                  <Button variant="ghost" size="sm" className="relative hover:bg-red-100 dark:hover:bg-red-900">
                     <Bell size={20} />
-                    <Badge className="absolute -top-1 -right-1 h-4 w-4 p-0 text-xs">
+                    <Badge className="absolute -top-1 -right-1 h-4 w-4 p-0 text-xs bg-red-500">
                       3
                     </Badge>
                   </Button>
@@ -106,7 +106,7 @@ export default function Navigation() {
                   <Button
                     onClick={() => setShowPostModal(true)}
                     size="sm"
-                    className="hidden sm:inline-flex bg-secondary hover:bg-secondary/90"
+                    className="hidden sm:inline-flex bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-lg"
                   >
                     <Plus size={16} className="mr-2" />
                     Post Item
