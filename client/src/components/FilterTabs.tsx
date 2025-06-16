@@ -52,10 +52,10 @@ export default function FilterTabs({ filters, onFilterChange }: FilterTabsProps)
             key={option.key}
             variant={active ? "default" : "outline"}
             onClick={() => handleFilterClick(option.key, option.type)}
-            className={`px-6 py-3 rounded-full font-medium transition-colors ${
+            className={`px-6 py-3 rounded-full font-medium transition-all shadow-sm ${
               active 
-                ? "bg-primary text-white hover:bg-primary/90" 
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                ? "bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600 shadow-lg" 
+                : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 border border-red-200 dark:border-red-800"
             }`}
           >
             <Icon size={16} className="mr-2" />

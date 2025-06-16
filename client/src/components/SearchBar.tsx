@@ -24,12 +24,12 @@ export default function SearchBar({ onSearch, placeholder = "Search for books, f
           placeholder={placeholder}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none bg-white shadow-sm pr-20"
+          className="w-full px-6 py-4 text-lg border-2 border-red-200 dark:border-red-800 rounded-xl focus:border-red-500 focus:outline-none bg-white dark:bg-gray-800 shadow-lg pr-20"
         />
         <Button 
           type="submit"
           size="sm"
-          className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-teal-600"
+          className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 shadow-lg"
         >
           <Search size={16} />
         </Button>
