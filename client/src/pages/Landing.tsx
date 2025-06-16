@@ -64,15 +64,15 @@ export default function Landing() {
   const activeBanner = banners[0];
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 via-white to-secondary/10 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 dark:from-gray-900 dark:via-red-950 dark:to-orange-950 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-6">
               Share, Care & Connect
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8">
               Join India's largest community for donating, renting, and requesting items. 
               Make a difference while saving money and reducing waste.
             </p>
@@ -86,7 +86,7 @@ export default function Landing() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button 
                 size="lg"
-                className="bg-primary hover:bg-teal-600 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
                 onClick={() => window.location.href = "/browse"}
               >
                 <Gift className="mr-3" size={20} />
@@ -95,7 +95,7 @@ export default function Landing() {
               <Button 
                 variant="outline"
                 size="lg"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold"
+                className="border-2 border-red-500 text-red-600 hover:bg-red-500 hover:text-white px-8 py-4 text-lg font-semibold transition-all"
                 onClick={() => window.location.href = "/browse?type=rent"}
               >
                 <HandHeart className="mr-3" size={20} />
@@ -103,7 +103,7 @@ export default function Landing() {
               </Button>
               <Button 
                 size="lg"
-                className="bg-secondary hover:bg-red-500 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
                 onClick={() => setShowPostModal(true)}
               >
                 <Megaphone className="mr-3" size={20} />
@@ -113,21 +113,21 @@ export default function Landing() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="text-3xl font-bold text-primary mb-2">{statsData.totalUsers.toLocaleString()}+</div>
-                <div className="text-gray-600">Active Users</div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-red-100 dark:border-red-800">
+                <div className="text-3xl font-bold text-red-600 mb-2">{statsData.totalUsers.toLocaleString()}+</div>
+                <div className="text-gray-600 dark:text-gray-400">Active Users</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="text-3xl font-bold text-secondary mb-2">{statsData.totalItems.toLocaleString()}+</div>
-                <div className="text-gray-600">Items Shared</div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-orange-100 dark:border-orange-800">
+                <div className="text-3xl font-bold text-orange-600 mb-2">{statsData.totalItems.toLocaleString()}+</div>
+                <div className="text-gray-600 dark:text-gray-400">Items Shared</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="text-3xl font-bold text-primary mb-2">{statsData.cities}+</div>
-                <div className="text-gray-600">Cities</div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-red-100 dark:border-red-800">
+                <div className="text-3xl font-bold text-red-600 mb-2">{statsData.cities}+</div>
+                <div className="text-gray-600 dark:text-gray-400">Cities</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="text-3xl font-bold text-secondary mb-2">{statsData.transactions.toLocaleString()}+</div>
-                <div className="text-gray-600">Successful Exchanges</div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-orange-100 dark:border-orange-800">
+                <div className="text-3xl font-bold text-orange-600 mb-2">{statsData.transactions.toLocaleString()}+</div>
+                <div className="text-gray-600 dark:text-gray-400">Successful Exchanges</div>
               </div>
             </div>
           </div>
@@ -135,13 +135,13 @@ export default function Landing() {
       </section>
 
       {/* Featured Items */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-4">
               Available Near You
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-400">
               Discover amazing items available for donation and rent in your area
             </p>
           </div>

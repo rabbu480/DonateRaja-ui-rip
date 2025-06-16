@@ -96,7 +96,7 @@ export default function ItemCard({ item, onRequestClick }: ItemCardProps) {
   };
 
   return (
-    <Card className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group">
+    <Card className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-red-100 dark:border-red-800 overflow-hidden hover:shadow-xl hover:border-red-200 dark:hover:border-red-700 transition-all duration-300 group">
       {/* Image */}
       <div className="relative h-48 bg-gray-200">
         {item.images && item.images.length > 0 ? (
@@ -131,17 +131,17 @@ export default function ItemCard({ item, onRequestClick }: ItemCardProps) {
         <div className="flex items-center justify-between mb-2">
           <Badge 
             variant={item.type === "donate" ? "default" : "secondary"}
-            className={item.type === "donate" ? "bg-green-100 text-green-800" : "bg-blue-100 text-blue-800"}
+            className={item.type === "donate" ? "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300" : "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"}
           >
             {item.type === "donate" ? "DONATION" : "RENTAL"}
           </Badge>
         </div>
 
-        <h3 className="font-semibold text-gray-900 mb-2 line-clamp-1">
+        <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 line-clamp-1">
           {item.title}
         </h3>
 
-        <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
           {item.description}
         </p>
 
@@ -185,9 +185,9 @@ export default function ItemCard({ item, onRequestClick }: ItemCardProps) {
           disabled={requestMutation.isPending}
           className={`w-full mt-2 ${
             item.type === "donate"
-              ? "bg-primary hover:bg-teal-600"
-              : "bg-secondary hover:bg-red-500"
-          } text-white font-medium`}
+              ? "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600"
+              : "bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600"
+          } text-white font-medium shadow-lg hover:shadow-xl transition-all`}
         >
           <Send size={16} className="mr-2" />
           {requestMutation.isPending ? "Sending..." : "Send Request"}
