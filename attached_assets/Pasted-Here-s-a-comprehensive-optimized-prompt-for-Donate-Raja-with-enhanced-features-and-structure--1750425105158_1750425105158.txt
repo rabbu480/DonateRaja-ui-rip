@@ -1,0 +1,160 @@
+Here's a **comprehensive, optimized prompt** for Donate Raja with enhanced features and structure:
+
+---
+
+### **Donate Raja Platform Prompt**  
+**Goal**: Build a full-stack web platform for item donation/rental with social features.  
+
+---
+
+### **Core Features**  
+#### **1. Authentication & Security**  
+- [✅ Done] Login via **email/phone/user ID + password**  
+- [✅ Done] Signup with email verification  
+- [✅ Done] Forgot/reset password flow  
+- **2FA option** for sensitive actions (e.g., item deletion)  
+
+#### **2. User Dashboard**  
+- **Weekly Cause Banner**:  
+  - Admin-posted campaigns (e.g., "100 Books for Kids This Week! 75% Achieved")  
+  - Users can click to view/contribute to the cause  
+- **Personal Stats Widget**:  
+  - "You’ve donated 12 items | Rented 5 items"  
+  - Badges for milestones (e.g., "Eco Hero: 50+ Donations")  
+
+#### **3. Item Management**  
+- **Post Items**:  
+  - Toggle between **Offer/Request** + **Donate/Rent**  
+  - Fields: Title, description, category, condition, images, location (map picker)  
+- **Browse Feed**:  
+  - Filter by type (donation/rental), category, distance, condition  
+  - **Save Favorites** ❤️ for later  
+- **User Listings**:  
+  - Tabs: "My Offers," "My Requests," "Archived"  
+  - Edit/delete/flag items  
+
+#### **4. Social & Engagement**  
+- **Review System**:  
+  - Rate users post-transaction (1–5 stars + comments)  
+  - Display average rating on profiles  
+- **Real-Time Chat**:  
+  - In-app messaging for item negotiations  
+  - Notifications for unread messages 🔔  
+- **Community Feed**:  
+  - Success stories ("User X donated 100 toys!")  
+  - Comments on item listings  
+
+#### **5. Admin Panel**  
+- **Banner Management**:  
+  - Create/edit weekly causes with progress bars  
+  - Schedule banners in advance  
+- **Moderation**:  
+  - Toggle user verification badges  
+  - Remove reported items/messages  
+- **Analytics**:  
+  - Track donations/rentals by category/location  
+  - Export reports (CSV/PDF)  
+
+#### **6. Notifications**  
+- Push/email alerts for:  
+  - New messages  
+  - Favorited items  
+  - Donation goal milestones  
+  - Admin announcements  
+
+---
+
+### **Enhanced Features (Optional)**  
+1. **Item Swap Suggestions**:  
+   - "Users who liked your sofa also wanted chairs"  
+2. **Delivery Coordination**:  
+   - Integrate with courier APIs for large items  
+3. **Gamification**:  
+   - Leaderboards for top donors/renters  
+   - Redeem points for platform perks  
+4. **AR Preview**:  
+   - 3D view of furniture items via phone camera  
+
+---
+
+### **Tech Stack Suggestions**  
+- **Frontend**: React/Next.js + Tailwind CSS  
+- **Backend**: Spring Boot (Kotlin)/Node.js  
+- **Database**: PostgreSQL + Redis (caching)  
+- **Real-Time**: WebSocket/Socket.io  
+- **Cloud**: AWS S3 (images), Firebase (notifications)  
+
+---
+
+### **Design Requirements**  
+- **Wireframes**: Include a **mobile-first layout** with dark mode  
+- **Style Guide**:  
+  - Primary font: **Inter** (clean readability)  
+  - Colors: Teal (#2AA8A8) + Coral (#FF6B6B) for CTAs  
+  - Icons: **Material Design** or **Heroicons**  
+- **Accessibility**:  
+  - Screen reader support  
+  - Alt text for images  
+
+---
+
+### **Security & Compliance**  
+- GDPR-compliant data handling  
+- Image moderation API to block inappropriate uploads  
+- Rate limiting for API endpoints  
+
+--- 
+
+Let me know if you want to expand any section (e.g., detailed API endpoints, ER diagrams, or UI examples)! 🛠️
+
+
+
+# DonateRaja  
+*A Community Sharing Platform*  
+
+![DonateRaja Banner](https://via.placeholder.com/1200x400?text=DonateRaja+Banner)  
+
+## 🌟 Overview  
+DonateRaja is a web app that empowers users to **share resources** (donate/rent) and **request items** they need, while admins can promote social causes via banners. Built to foster community collaboration and reduce waste.  
+
+## 🚀 Features  
+### **User Features**  
+- **Post Listings**:  
+  - 📦 Offer items for **Donation** or **Rent**.  
+  - 🎯 Request items for **Donation** or **Rent**.  
+- **Dashboard**: View your active/allocated listings.  
+- **Secure Messaging**: Chat with users **after item allocation**.  
+- **Reviews**: Rate transactions post-completion.  
+
+### **Admin Features**  
+- 🚩 Create **Banners** for social causes (e.g., "Bicycles for Students").  
+- 📊 Track banner progress (funds/items collected).  
+- 👥 Manage users/listings.  
+
+### **Technical Features**  
+- 🔐 JWT Authentication + Role-Based Access (User/Admin).  
+- 💬 Real-time messaging (Socket.io).  
+- 🔔 Notifications for allocations, messages, and banner updates.  
+
+## 🛠️ Tech Stack  
+| **Category**       | **Tools**                                                                 |  
+|---------------------|---------------------------------------------------------------------------|  
+| **Frontend**        | React.js, Tailwind CSS, Axios                                            |  
+| **Backend**         | Node.js, Express.js, RESTful APIs                                        |  
+| **Database**        | PostgreSQL (with Sequelize ORM)                                          |  
+| **Authentication**  | Firebase Auth / JWT                                                      |  
+| **Real-time**       | Socket.io                                                                 |  
+| **Storage**         | AWS S3 / Firebase Cloud Storage (for images)                             |  
+| **Deployment**      | Heroku (Backend), Netlify/Vercel (Frontend)                              |  
+
+## 🖥️ Installation  
+1. **Clone the repo**:  
+   ```bash  
+   git clone https://github.com/yourusername/donateraja.git  
+   cd donateraja  
+
+
+
+* https://llamacoder.together.ai/chats/5miYLfMmsH5q0TeF
+* https://manus.im/app/S8DDPl73b8dI839gtNX5cG\
+* https://replit.com/

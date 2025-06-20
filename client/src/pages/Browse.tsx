@@ -108,7 +108,7 @@ export default function Browse() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-4">
             Discover & Share
           </h1>
           <p className="text-xl text-gray-600 mb-6">
@@ -225,12 +225,12 @@ export default function Browse() {
 
         {/* Content Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto">
-            <TabsTrigger value="items" className="flex items-center space-x-2">
+          <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto bg-gray-100 dark:bg-gray-800">
+            <TabsTrigger value="items" className="flex items-center space-x-2 data-[state=active]:bg-red-100 data-[state=active]:text-red-800">
               <Package size={16} />
               <span>Items ({items.length})</span>
             </TabsTrigger>
-            <TabsTrigger value="requests" className="flex items-center space-x-2">
+            <TabsTrigger value="requests" className="flex items-center space-x-2 data-[state=active]:bg-orange-100 data-[state=active]:text-orange-800">
               <MessageCircle size={16} />
               <span>Requests ({requests.length})</span>
             </TabsTrigger>

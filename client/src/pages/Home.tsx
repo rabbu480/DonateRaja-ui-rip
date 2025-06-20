@@ -52,41 +52,41 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Welcome back, {user?.firstName || "Friend"}! 👋
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2">
+            Welcome back, {(user as any)?.firstName || "Friend"}! 👋
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-400">
             Ready to make a difference in your community today?
           </p>
         </div>
 
         {/* Community Banner */}
         {activeBanner && (
-          <Card className="mb-8 bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
+          <Card className="mb-8 bg-gradient-to-r from-red-50 via-orange-50 to-yellow-50 dark:from-red-950 dark:via-orange-950 dark:to-yellow-950 border-red-200 dark:border-red-800 shadow-lg">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2">
                     🎯 {activeBanner.title}
                   </h3>
-                  <p className="text-gray-700 mb-4">{activeBanner.description}</p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">{activeBanner.description}</p>
                   
                   {activeBanner.target && (
                     <div className="flex items-center space-x-4">
                       <div className="flex-1 max-w-xs">
-                        <div className="bg-white/50 rounded-full h-3 mb-1">
+                        <div className="bg-white/70 dark:bg-gray-800/70 rounded-full h-3 mb-1">
                           <div 
-                            className="bg-primary rounded-full h-3 transition-all duration-300"
+                            className="bg-gradient-to-r from-red-500 to-orange-500 rounded-full h-3 transition-all duration-300"
                             style={{ 
                               width: `${Math.min(((activeBanner.collected || 0) / activeBanner.target) * 100, 100)}%` 
                             }}
                           ></div>
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           {activeBanner.collected || 0} / {activeBanner.target} items
                         </div>
                       </div>
-                      <Badge variant="secondary">
+                      <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">
                         {Math.round(((activeBanner.collected || 0) / activeBanner.target) * 100)}% Complete
                       </Badge>
                     </div>
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
                 
                 <Button 
-                  className="bg-primary hover:bg-teal-600"
+                  className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-lg"
                   onClick={() => {
                     if (activeBanner.linkUrl) {
                       window.open(activeBanner.linkUrl, '_blank');
@@ -114,11 +114,11 @@ export default function Home() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-600">Your Points</p>
-                  <p className="text-2xl font-bold text-primary">{user?.points || 0}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Your Points</p>
+                  <p className="text-2xl font-bold text-red-600">{(user as any)?.points || 0}</p>
                 </div>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Award className="text-primary" size={24} />
+                <div className="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-lg flex items-center justify-center">
+                  <Award className="text-red-600" size={24} />
                 </div>
               </div>
             </CardContent>
