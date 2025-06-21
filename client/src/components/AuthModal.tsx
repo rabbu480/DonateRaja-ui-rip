@@ -323,4 +323,3 @@ export default function AuthModal({ open, onOpenChange }: AuthModalProps) {
     </Dialog>
   );
 }
-}
