@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  content-visibility: auto;
+}
+
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(0, 0%, 15%);
