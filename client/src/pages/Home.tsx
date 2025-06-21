@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ItemCard from "@/components/ItemCard";
 import RequestCard from "@/components/RequestCard";
-import { useAuth } from "@/hooks/useAuth";
+import { useAuthApi } from "@/hooks/useAuthApi";
 import { 
   Package, 
   MessageCircle, 
